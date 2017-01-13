@@ -44,6 +44,7 @@ namespace T100Test
                 {
                     //Console.WriteLine(line.ToString());
                     //tabledata += line.ToString();
+                    //dddd
                     _s.WriteLine(line.ToString());
                 }
                 tabledata = _s.ToString();

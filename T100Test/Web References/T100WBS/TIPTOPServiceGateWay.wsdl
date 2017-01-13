@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:fjs="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" name="TIPTOPServiceGateWay" targetNamespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="invokeSrv">
+    <wsdl:part name="request" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="invokeSrvResponse">
+    <wsdl:part name="response" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="invokeMdm">
+    <wsdl:part name="request" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="invokeMdmResponse">
+    <wsdl:part name="response" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="syncProd">
+    <wsdl:part name="request" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="syncProdResponse">
+    <wsdl:part name="response" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="callbackSrv">
+    <wsdl:part name="request" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="callbackSrvResponse">
+    <wsdl:part name="response" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="TIPTOPServiceGateWayPortType">
+    <wsdl:operation name="invokeSrv">
+      <wsdl:input name="invokeSrv" message="fjs:invokeSrv" />
+      <wsdl:output name="invokeSrvResponse" message="fjs:invokeSrvResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="invokeMdm">
+      <wsdl:input name="invokeMdm" message="fjs:invokeMdm" />
+      <wsdl:output name="invokeMdmResponse" message="fjs:invokeMdmResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="syncProd">
+      <wsdl:input name="syncProd" message="fjs:syncProd" />
+      <wsdl:output name="syncProdResponse" message="fjs:syncProdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="callbackSrv">
+      <wsdl:input name="callbackSrv" message="fjs:callbackSrv" />
+      <wsdl:output name="callbackSrvResponse" message="fjs:callbackSrvResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TIPTOPServiceGateWayBinding" type="fjs:TIPTOPServiceGateWayPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="invokeSrv">
+      <soap:operation soapAction="" />
+      <wsdl:input name="invokeSrv">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:input>
+      <wsdl:output name="invokeSrvResponse">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="invokeMdm">
+      <soap:operation soapAction="" />
+      <wsdl:input name="invokeMdm">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:input>
+      <wsdl:output name="invokeMdmResponse">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="syncProd">
+      <soap:operation soapAction="" />
+      <wsdl:input name="syncProd">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:input>
+      <wsdl:output name="syncProdResponse">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callbackSrv">
+      <soap:operation soapAction="" />
+      <wsdl:input name="callbackSrv">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:input>
+      <wsdl:output name="callbackSrvResponse">
+        <soap:body use="literal" namespace="http://www.digiwin.com.cn/tiptop/TIPTOPServiceGateWay" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TIPTOPServiceGateWay">
+    <wsdl:port name="TIPTOPServiceGateWayPortType" binding="fjs:TIPTOPServiceGateWayBinding">
+      <soap:address location="http://192.168.10.1/wtoptst/ws/r/awsp900" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

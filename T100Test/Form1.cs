@@ -64,7 +64,7 @@ namespace T100Test
 
                 T100WBS.TIPTOPServiceGateWay t = new T100WBS.TIPTOPServiceGateWay();
                 string respone = t.invokeSrv(xmldata);
-
+                int count = respone.Length;
                 sw.WriteLine("返回结果：");
                 sw.WriteLine(respone);
 

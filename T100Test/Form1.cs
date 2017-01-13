@@ -68,7 +68,7 @@ namespace T100Test
                 sw.WriteLine("返回结果：");
                 sw.WriteLine(respone);
 
-                MessageBox.Show("OK");
+                MessageBox.Show("OK---");
             }
             catch(Exception ex)
             {
